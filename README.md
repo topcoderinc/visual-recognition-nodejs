@@ -10,17 +10,17 @@
 
 2. Download and install the [Cloud-foundry CLI](https://github.com/cloudfoundry/cli#downloads) tools
 
-3. Edit the `manifest.yml` file and change the `<application-name>` to something unique.
+3. Edit the `manifest.yml` file and change the application name by replacing `<your topcoder handle>` with your top coder handle. eg: `foo-fun-watson`
   ```none
 applications:
 - services:
   - visual-recognition-service
-  name: <application-name>
+  name: <your topcoder handle>-fun-watson
   command: node app.js
   path: .
   memory: 128M
   ```
-  The name you use will determinate your application url initially, e.g. `<application-name>.mybluemix.net`.
+  The name you use will determinate your application url initially, e.g. `foo-fun-watson.mybluemix.net`.
 
 4. Connect to Bluemix in the command line tool
   ```sh
@@ -35,7 +35,7 @@ applications:
 
 6. Push it live!
   ```sh
-  $ cf push <your topcoder handle>-fun-watson
+  $ cf push
   ```
 
 See the full [Getting Started](http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/doc/getting_started/) documentation for more details, including code snippets and references.
